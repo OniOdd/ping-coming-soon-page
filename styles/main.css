@@ -6,6 +6,14 @@
   font-style: normal;
   font-display: swap;
 }
+/* Light Italic */
+@font-face {
+  font-family: "Libre Franklin";
+  src: url("../assets/fonts/librefranklin-lightitalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
 /* SemiBold */
 @font-face {
   font-family: "Libre Franklin";
