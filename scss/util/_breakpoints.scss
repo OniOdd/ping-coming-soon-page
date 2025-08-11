@@ -1,0 +1,37 @@
+@use "sass:map";
+
+// Breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+// Function for obtaining a value from a map
+@function breakpoint($key) {
+  $value: map.get($grid-breakpoints, $key);
+  @if not $value {
+    @error "Unknown breakpoint: #{$key}";
+  }
+  @return $value;
+}
+
+// Mixin: min-width
+@mixin media-up($key) {
+  $value: breakpoint($key);
+  @media (min-width: $value) {
+    @content;
+  }
+}
+
+// Mixin: max-width (minus 0.02px)
+@mixin media-down($key) {
+  $value: breakpoint($key);
+  $max: $value - 0.02px;
+  @media (max-width: $max) {
+    @content;
+  }
+}

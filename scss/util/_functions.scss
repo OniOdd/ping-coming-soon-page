@@ -1,0 +1,25 @@
+@use "sass:math";
+
+@function rem($value) {
+  @if math.is-unitless($value) {
+    $remValue: math.div($value, 16);
+    $round: math.round($remValue * 1000);
+    $result: math.div($round, 1000);
+
+    @return #{$result}rem;
+  } @else {
+    @error "Hey, don't use units when using the rem() function!";
+  }
+}
+
+@function em($value1, $value2: 16) {
+  @if math.is-unitless($value1) and math.is-unitless($value2) {
+    $emValue: math.div($value1, $value2);
+    $round: math.round($emValue * 1000);
+    $result: math.div($round, 1000);
+
+    @return #{$result}em;
+  } @else {
+    @error "Hey, don't use units when using the em() function!";
+  }
+}
