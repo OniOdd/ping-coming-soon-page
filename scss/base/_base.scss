@@ -16,7 +16,9 @@ html {
 
 body {
   font-family: "Libre Franklin", system-ui, -apple-system, sans-serif;
-  font-size: u.rem(20);
+  font-weight: 300;
+  line-height: 1.2;
+  color: var(--clr-blue-950);
 }
 
 html,
@@ -24,11 +26,16 @@ body {
   height: 100%;
 }
 
-img {
+img,
+svg {
   display: block;
   width: 100%;
 }
 
 a {
   text-decoration: none;
+}
+
+strong {
+  font-weight: 700;
 }
