@@ -71,11 +71,16 @@ svg {
 }
 
 a {
+  display: inline-block;
   text-decoration: none;
 }
 
 strong {
   font-weight: 700;
+}
+
+ul {
+  list-style: none;
 }
 
 /*# sourceMappingURL=main.css.map */
