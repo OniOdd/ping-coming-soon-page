@@ -1,0 +1,122 @@
+@use "../util" as u;
+
+.wrapper {
+  width: min(100% - 56px, 640px);
+  margin-inline: auto;
+  padding-top: 84px;
+  padding-bottom: 37px;
+}
+
+.main {
+  margin-bottom: 120px;
+}
+
+.ping-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__logo {
+    width: 54px;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    margin-bottom: u.rem(19);
+    font-size: u.rem(22);
+    font-weight: 300;
+    color: var(--clr-gray-400);
+  }
+
+  &__font-dark {
+    color: var(--clr-blue-950);
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 88.4%;
+    margin-bottom: 68px;
+  }
+
+  &__label {
+    justify-self: center;
+    margin-bottom: u.rem(32);
+    letter-spacing: 0.003em;
+  }
+
+  &__input {
+    margin-bottom: 10px;
+    padding: 13px 20px 13px 32px;
+    font-size: u.rem(12.2);
+    border: 1px solid var(--clr-blue-200);
+    border-radius: 20px;
+
+    &:focus {
+      outline: 1px solid var(--clr-blue-200);
+    }
+
+    &::placeholder {
+      color: var(--clr-blue-200);
+    }
+  }
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  column-gap: 13px;
+  margin-bottom: 27px;
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--clr-blue-200);
+    border-radius: 50%;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: var(--clr-blue-500-hover);
+    }
+
+    &:hover .socials__fb-icon {
+      fill: var(--clr-white);
+    }
+
+    &:hover .socials__x-icon {
+      fill: var(--clr-white);
+    }
+
+    &:hover .socials__ig-icon {
+      fill: var(--clr-white);
+    }
+  }
+
+  &__fb-icon {
+    width: 18px;
+  }
+
+  &__x-icon {
+    width: 18px;
+  }
+
+  &__ig-icon {
+    width: 20px;
+  }
+
+  &__fb-icon,
+  &__x-icon,
+  &__ig-icon {
+    fill: var(--clr-blue-500);
+    transition: fill 0.2s;
+  }
+}
+
+.copyright {
+  font-size: u.rem(10);
+  text-align: center;
+  color: var(--clr-gray-400);
+}
