@@ -1,0 +1,8 @@
+.container {
+  width: min(100% - 56px, 640px);
+  margin-inline: auto;
+
+  &--modal {
+    width: min(100% - 50px, 420px);
+  }
+}

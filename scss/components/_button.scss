@@ -16,5 +16,11 @@
 
   &--notify {
     font-size: u.rem(12);
+    text-transform: capitalize;
+  }
+
+  &--ok {
+    width: 50%;
+    text-transform: uppercase;
   }
 }
