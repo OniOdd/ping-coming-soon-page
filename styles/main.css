@@ -311,7 +311,7 @@ ul {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: min(100%, 420px);
+  width: min(90%, 420px);
   background-color: var(--clr-white);
   border: none;
   border-radius: 10px;
