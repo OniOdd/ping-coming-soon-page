@@ -31,6 +31,7 @@
             id="notify-form"
             action="#"
             method="post"
+            novalidate
           >
             <label class="ping-section__label" for="email-input"
               >Subscribe and get notified</label
@@ -39,6 +40,7 @@
               class="ping-section__input"
               type="email"
               placeholder="Your email address..."
+              required
               name="emailInput"
               id="email-input"
             />
@@ -116,10 +118,7 @@
       </footer>
     </div>
     <dialog class="modal" id="subscribed-modal">
-      <section
-        class="modal__content container container--modal"
-        aria-labelledby="modal-title"
-      >
+      <section class="modal__content" aria-labelledby="modal-title">
         <h2 class="modal__title" id="modal-title">Subscribed!</h2>
         <p class="modal__message">
           Thank you! You have been subscribed successfully.

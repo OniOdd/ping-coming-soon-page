@@ -92,9 +92,6 @@ ul {
   width: min(100% - 56px, 640px);
   margin-inline: auto;
 }
-.container--modal {
-  width: min(100% - 50px, 420px);
-}
 
 .button {
   padding: 13px;
@@ -311,23 +308,21 @@ ul {
 }
 
 .modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: hsla(0, 0%, 0%, 0.7);
-}
-.modal__content {
-  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: min(100%, 420px);
+  background-color: var(--clr-white);
+  border: none;
+  border-radius: 10px;
+}
+.modal::backdrop {
+  background-color: hsla(0, 0%, 0%, 0.7);
+}
+.modal__content {
   padding: 20px;
   font-size: 1rem;
   text-align: center;
-  background-color: var(--clr-white);
-  border-radius: 10px;
 }
 .modal__title {
   margin-bottom: 0.625rem;
