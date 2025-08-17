@@ -178,6 +178,7 @@ ul {
   color: var(--clr-blue-950);
 }
 .ping-section__form {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
   width: 88.4%;
@@ -218,6 +219,10 @@ ul {
 .ping-section__input::placeholder {
   color: var(--clr-blue-200);
 }
+.ping-section__input.error {
+  margin-bottom: 6px;
+  border: 1px solid var(--clr-red-400);
+}
 @media (min-width: 576px) {
   .ping-section__input {
     grid-area: 2/1/3/2;
@@ -225,6 +230,25 @@ ul {
     padding: 19px 30px 18px;
     font-size: 1.013rem;
     border-radius: 28px;
+  }
+  .ping-section__input.error {
+    margin-bottom: 0;
+  }
+}
+.ping-section__error-message {
+  margin-bottom: 1.5rem;
+  font-size: 0.65rem;
+  font-style: italic;
+  text-align: center;
+  color: var(--clr-red-400);
+}
+@media (min-width: 576px) {
+  .ping-section__error-message {
+    position: absolute;
+    bottom: -23px;
+    left: 30px;
+    margin-bottom: 0;
+    font-size: 0.775rem;
   }
 }
 
