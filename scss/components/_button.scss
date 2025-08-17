@@ -8,6 +8,7 @@
   border: 1px solid var(--clr-blue-200);
   border-radius: 20px;
   cursor: pointer;
+  box-shadow: 0 5px 15px var(--clr-blue-200);
   transition: background-color 0.2s;
 
   &:hover {
@@ -17,6 +18,13 @@
   &--notify {
     font-size: u.rem(12);
     text-transform: capitalize;
+
+    @include u.media-up(sm) {
+      grid-area: 2 / 2 / 3 / 3;
+      padding: 19px 20px 18px;
+      font-size: u.rem(16.2);
+      border-radius: 28px;
+    }
   }
 
   &--ok {
