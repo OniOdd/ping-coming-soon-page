@@ -41,16 +41,12 @@ form.addEventListener("submit", (event) => {
 
   bodyElemClasses.add("lock");
   modal.showModal();
-
-  return;
 });
 
 okBtn.addEventListener("click", () => {
   bodyElemClasses.remove("lock");
   emailInput.value = "";
   modal.close();
-
-  return;
 });
 
 function createParagraphElement() {
